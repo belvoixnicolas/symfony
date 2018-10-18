@@ -3,18 +3,36 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="stylesheet" href="https://bootswatch.com/4/superhero/bootstrap.min.css">
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
-        <nav>
-            <ul>
-                <li>machin</li>
-                <li>truc</li>
-                <li>bidule</li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SymBlog</font></font></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarColor02">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="{{ path('blog') }}"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Articles</font></font><span class="sr-only"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(actuel)</font></font></span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/blog/new"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Créer un article</article></font></font></a>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Chercher</font></font></button>
+              </form>
+            </div>
         </nav>
 
-        {% block body %}{% endblock %}
+        <div class="container">
+            {% block body %}{% endblock %}
+        </div>
+
         {% block javascripts %}{% endblock %}
     </body>
 </html>
