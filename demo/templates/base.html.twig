@@ -8,7 +8,7 @@
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SymBlog</font></font></a>
+            <a class="navbar-brand" href="{{ path('home') }}"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SymBlog</font></font></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -19,7 +19,7 @@
                   <a class="nav-link" href="{{ path('blog') }}"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Articles</font></font><span class="sr-only"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(actuel)</font></font></span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/blog/new"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Créer un article</article></font></font></a>
+                  <a class="nav-link" href="{{ path('blog_create') }}"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Créer un article</article></font></font></a>
                 </li>
               </ul>
               <form class="form-inline my-2 my-lg-0">
